@@ -5,8 +5,6 @@
 
 /*
    This addon helps analysts create queries and post data to a spreadsheet on the fly (I have tested for mysql DB). 
-   
-   Connection details are to be given as User preferences. I have not worked out how to add that yet. Can someone help me with that?
 */
 
 //   Add the option on Addons menu when the spreadsheet is open
@@ -15,16 +13,18 @@ function onOpen(e) {
   .addItem('Query', 'showSidebar')
   .addItem('Connection','connectionDetails')
   .addToUi();
+  
+}
+// Add option to addon menu on installing the addon
+function onInstall(e) {
+  onOpen(e);
   var userProperties = PropertiesService.getUserProperties();
   userProperties.setProperty("serverIp", "");
   userProperties.setProperty("sqlPort", "");
   userProperties.setProperty("sqlUser", "");
   userProperties.setProperty("sqlPassword", "");
   userProperties.setProperty("sqlDB", "");
-}
-// Add option to addon menu on installing the addon
-function onInstall(e) {
-  onOpen(e);
+
 }
 
 //Show contents of sidebar.html
