@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+  </head>
+  <body>
+      <textarea rows="40" cols="50" id="queryArea" placeholder="Enter query here"></textarea>
+      <button type="submit" onClick="runQuery();">Run!</button>
+      <script>
+        function runQuery(){
+          google.script.run.runQuery(document.getElementById("queryArea").value);
+        }
+      </script>
+  </body>
+</html>
+
+
