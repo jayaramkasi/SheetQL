@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <input type="text" id="serverIp"><br>
+    <input type="number" id="sqlPort"><br>
+    <input type="text" id="sqlUser"><br>
+    <input type="password" id="sqlPassword"><br>
+    <input type="text" id="sqlDB"><br>    
+    <button onClick = "updateUserPrefs();">Update</button>
+  </body>
+  <script>
+    google.script.run.withSuccessHandler(setPrefs).getUserProperties();
+    function setPrefs(userPrefs){
+     document.getElementById("serverIp").value = userPrefs.serverIp;
+     document.getElementById("sqlPort").value = userPrefs.sqlPort;
+     document.getElementById("sqlUser").value = userPrefs.sqlUser;
+     document.getElementById("sqlPassword").value = userPrefs.sqlPassword;
+     document.getElementById("sqlDB").value = userPrefs.sqlDB;
+    }
+    function updateUserPrefs(){
+      var connectionProperties = {
+        "serverIp": document.getElementById("serverIp").value,
+        "sqlPort": document.getElementById("sqlPort").value,
+        "sqlUser": document.getElementById("sqlUser").value,
+        "sqlPassword": document.getElementById("sqlPassword").value,
+        "sqlDB": document.getElementById("sqlDB").value
+      };
+      google.script.run.setUserProperties(connectionProperties).withSuccessHandler(updateSuccess);
+    }
+    function updateSuccess(){
+    
+    }
+  </script>
+</html>
+
+
