@@ -4,11 +4,11 @@
     <base target="_top">
   </head>
   <body>
-    <input type="text" id="serverIp"><br>
-    <input type="number" id="sqlPort"><br>
-    <input type="text" id="sqlUser"><br>
-    <input type="password" id="sqlPassword"><br>
-    <input type="text" id="sqlDB"><br>    
+    <input type="text" id="serverIp" placeholder="Enter server IP "><br>
+    <input type="number" id="sqlPort" placeholder="Enter sql Port "><br>
+    <input type="text" id="sqlUser" placeholder="Enter sql User"><br>
+    <input type="password" id="sqlPassword" placeholder="Enter sql password"><br>
+    <input type="text" id="sqlDB" placeholder="Enter sql Database name"><br>    
     <button onClick = "updateUserPrefs();">Update</button>
   </body>
   <script>
@@ -28,10 +28,10 @@
         "sqlPassword": document.getElementById("sqlPassword").value,
         "sqlDB": document.getElementById("sqlDB").value
       };
-      google.script.run.setUserProperties(connectionProperties).withSuccessHandler(updateSuccess);
+      google.script.run.withSuccessHandler(updateSuccess).setUserProperties(connectionProperties);
     }
     function updateSuccess(){
-    
+        alert("Update success");
     }
   </script>
 </html>
