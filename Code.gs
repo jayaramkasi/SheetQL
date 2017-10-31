@@ -5,6 +5,8 @@
 
 /*
    This addon helps analysts create queries and post data to a spreadsheet on the fly (I have tested for mysql DB). 
+   
+   Developed for Rednile Innovations Private Limited. Released under MIT License.
 */
 
 //   Add the option on Addons menu when the spreadsheet is open
