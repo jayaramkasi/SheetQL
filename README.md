@@ -5,9 +5,11 @@ You can deploy this as a standalone script or a bound script. As far as I can se
 
 <b>How to deploy</b>
 
-Copy the code into a google scripts project. It should have 3 files 
+* Copy the code into a standalone google scripts project. It should have 3 files 
   - Code.gs
   - Sidebar.html
   - Connection.html
 
-Deploy it as a sheets add on, within your domain.
+* Deploy it as a sheets add on, within your domain. - Instructions provided <a href="https://developers.google.com/apps-script/add-ons/domain-wide">here</a>
+
+Have fun!
