@@ -10,6 +10,8 @@ You can deploy this as a standalone script or a bound script. As far as I can se
   - Sidebar.html
   - Connection.html
 
+I use dantharaja's fantastic node package "gapps" here for version control. https://github.com/danthareja/node-google-apps-script
+
 * Deploy it as a sheets add on, within your domain. - Instructions provided <a href="https://developers.google.com/apps-script/add-ons/domain-wide">here</a>
 
 Have fun!
