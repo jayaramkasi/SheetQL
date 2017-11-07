@@ -24,11 +24,11 @@ function onInstall(e) {
   onOpen(e);
   SpreadsheetApp.getActiveSpreadsheet().toast("Initializing user properties for the script","Initializing",1);
   var userProperties = PropertiesService.getUserProperties();
-  userProperties.setProperty("serverIp", "");
-  userProperties.setProperty("sqlPort", "");
-  userProperties.setProperty("sqlUser", "");
-  userProperties.setProperty("sqlPassword", "");
-  userProperties.setProperty("sqlDB", "");
+  userProperties.setProperty("serverIp", "")
+    .setProperty("sqlPort", "")
+    .setProperty("sqlUser", "")
+    .setProperty("sqlPassword", "")
+    .setProperty("sqlDB", "");
 
 }
 
